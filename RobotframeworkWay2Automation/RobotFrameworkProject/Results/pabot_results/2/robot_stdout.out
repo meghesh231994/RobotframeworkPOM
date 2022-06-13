@@ -1,0 +1,55 @@
+==============================================================================
+Testcases                                                                     
+==============================================================================
+Testcases.GetCarNameTest                                                      
+==============================================================================
+Get Cars Name Test toyota                                             Toyota Glanza
+Toyota Urban Cruiser
+Toyota Fortuner
+Toyota Innova Crysta
+Toyota Hilux
+Toyota Vellfire
+Toyota Camry
+Toyota Belta
+Toyota Rumion
+Toyota New Innova Crysta
+| PASS |
+------------------------------------------------------------------------------
+Get Cars Name Test kia                                                Kia Sonet
+Kia Seltos
+Kia Carens
+Kia Carnival
+Kia EV6
+| PASS |
+------------------------------------------------------------------------------
+Get Cars Name Test bmw                                                BMW X1
+BMW 3 Series
+BMW X5
+BMW X4
+BMW 2 Series Gran Coupe
+BMW X7
+BMW Z4
+BMW X3
+BMW 5 Series
+BMW 7 Series
+BMW 3 Series Gran Limousine
+BMW 6 Series GT
+BMW M8
+BMW X5 M
+BMW X6
+BMW 8 Series
+BMW M4 Competition
+BMW M5
+BMW M2
+BMW iX
+BMW i4
+BMW X8
+| PASS |
+------------------------------------------------------------------------------
+Testcases.GetCarNameTest                                              | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Testcases                                                             | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  C:\Users\way2automation\PycharmProjects\RobotFrameworkProject\Results\pabot_results\2\output.xml

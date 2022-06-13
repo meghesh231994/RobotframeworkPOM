@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220411 16:02:55.040" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcases" source="C:\Users\way2automation\PycharmProjects\RobotFrameworkProject\testcases">
+<suite id="s1-s1" name="FindNewCarsTestDataDriven" source="C:\Users\way2automation\PycharmProjects\RobotFrameworkProject\testcases\FindNewCarsTestDataDriven.robot">
+<test id="s1-s1-t1" name="Find New Cars Test toyota" line="45">
+<kw name="Find New Cars">
+<arg>chrome</arg>
+<arg>toyota</arg>
+<arg>Toyota Cars</arg>
+<kw name="launching browser" library="commons">
+<arg>${testsiteurl}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browserName}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220411 16:02:56.316" level="INFO">Opening browser 'chrome' to base url 'https://www.carwale.com/'.</msg>
+<status status="PASS" starttime="20220411 16:02:56.316" endtime="20220411 16:03:01.899"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220411 16:03:01.899" endtime="20220411 16:03:01.905"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20220411 16:03:01.920" level="INFO">New Cars, Used Cars, Buy a Car, Sell Your Car - CarWale</msg>
+<status status="PASS" starttime="20220411 16:03:01.906" endtime="20220411 16:03:01.921"/>
+</kw>
+<status status="PASS" starttime="20220411 16:02:56.315" endtime="20220411 16:03:01.921"/>
+</kw>
+<kw name="Go to new cars page" library="HomePage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${newcar_xpath}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220411 16:03:01.924" level="INFO">Simulating Mouse Over on element '//div[normalize-space()='NEW CARS']'.</msg>
+<status status="PASS" starttime="20220411 16:03:01.923" endtime="20220411 16:03:02.245"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${findnewcar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:02.247" level="INFO">Clicking element '//div[contains(text(),'Find New Cars')]'.</msg>
+<status status="PASS" starttime="20220411 16:03:02.245" endtime="20220411 16:03:02.464"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${newcar_header_xpath}</arg>
+<arg>New Cars</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:02.467" level="INFO">Verifying element '//h1[normalize-space()='New Cars']' contains exact text 'New Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:02.465" endtime="20220411 16:03:02.678"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:01.922" endtime="20220411 16:03:02.679"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${brandname}&quot; == &quot;toyota&quot;">
+<kw name="Go to Toyota" library="NewCarPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${toyotacar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:02.683" level="INFO">Clicking element '//div[normalize-space()='Toyota']'.</msg>
+<status status="PASS" starttime="20220411 16:03:02.682" endtime="20220411 16:03:02.852"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:02.681" endtime="20220411 16:03:02.852"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:02.680" endtime="20220411 16:03:02.853"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${brandname}&quot; == &quot;bmw&quot;">
+<kw name="Go to BMW" library="NewCarPage">
+<status status="NOT RUN" starttime="20220411 16:03:02.853" endtime="20220411 16:03:02.854"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:02.853" endtime="20220411 16:03:02.854"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${brandname}&quot; == &quot;kia&quot;">
+<kw name="Go to Kia" library="NewCarPage">
+<status status="NOT RUN" starttime="20220411 16:03:02.854" endtime="20220411 16:03:02.855"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:02.854" endtime="20220411 16:03:02.855"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Invalid car selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220411 16:03:02.856" endtime="20220411 16:03:02.856"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:02.855" endtime="20220411 16:03:02.856"/>
+</branch>
+<status status="PASS" starttime="20220411 16:03:02.679" endtime="20220411 16:03:02.856"/>
+</if>
+<kw name="verify car heading" library="CarBase">
+<arg>${carheading}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${carheading_xpath}</arg>
+<arg>${carheading}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:02.858" level="INFO">Verifying element '//*[@id='root']/div[2]/div/div[2]/div/h1' contains exact text 'Toyota Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:02.857" endtime="20220411 16:03:03.151"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:02.856" endtime="20220411 16:03:03.152"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220411 16:03:05.158" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220411 16:03:03.152" endtime="20220411 16:03:05.158"/>
+</kw>
+<status status="PASS" starttime="20220411 16:02:56.314" endtime="20220411 16:03:05.158"/>
+</kw>
+<kw name="Finish Test Case" library="commons" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>Ending the test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220411 16:03:05.161" level="INFO">Ending the test case</msg>
+<status status="PASS" starttime="20220411 16:03:05.160" endtime="20220411 16:03:05.161"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220411 16:03:05.161" endtime="20220411 16:03:07.450"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:05.159" endtime="20220411 16:03:07.450"/>
+</kw>
+<status status="PASS" starttime="20220411 16:02:56.312" endtime="20220411 16:03:07.451"/>
+</test>
+<test id="s1-s1-t2" name="Find New Cars Test kia" line="45">
+<kw name="Find New Cars">
+<arg>firefox</arg>
+<arg>kia</arg>
+<arg>Kia Cars</arg>
+<kw name="launching browser" library="commons">
+<arg>${testsiteurl}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browserName}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220411 16:03:07.465" level="INFO">Opening browser 'firefox' to base url 'https://www.carwale.com/'.</msg>
+<msg timestamp="20220411 16:03:07.466" level="INFO">Firefox driver log is always forced to to: C:\Users\way2automation\PycharmProjects\RobotFrameworkProject\Results\pabot_results\1\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220411 16:03:07.464" endtime="20220411 16:03:15.327"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220411 16:03:15.328" endtime="20220411 16:03:15.337"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20220411 16:03:15.349" level="INFO">New Cars, Used Cars, Buy a Car, Sell Your Car - CarWale</msg>
+<status status="PASS" starttime="20220411 16:03:15.337" endtime="20220411 16:03:15.349"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:07.464" endtime="20220411 16:03:15.350"/>
+</kw>
+<kw name="Go to new cars page" library="HomePage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${newcar_xpath}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220411 16:03:15.352" level="INFO">Simulating Mouse Over on element '//div[normalize-space()='NEW CARS']'.</msg>
+<status status="PASS" starttime="20220411 16:03:15.351" endtime="20220411 16:03:15.635"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${findnewcar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:15.637" level="INFO">Clicking element '//div[contains(text(),'Find New Cars')]'.</msg>
+<status status="PASS" starttime="20220411 16:03:15.636" endtime="20220411 16:03:16.137"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${newcar_header_xpath}</arg>
+<arg>New Cars</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:16.138" level="INFO">Verifying element '//h1[normalize-space()='New Cars']' contains exact text 'New Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:16.137" endtime="20220411 16:03:16.262"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:15.350" endtime="20220411 16:03:16.262"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${brandname}&quot; == &quot;toyota&quot;">
+<kw name="Go to Toyota" library="NewCarPage">
+<status status="NOT RUN" starttime="20220411 16:03:16.263" endtime="20220411 16:03:16.263"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:16.263" endtime="20220411 16:03:16.263"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${brandname}&quot; == &quot;bmw&quot;">
+<kw name="Go to BMW" library="NewCarPage">
+<status status="NOT RUN" starttime="20220411 16:03:16.264" endtime="20220411 16:03:16.264"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:16.264" endtime="20220411 16:03:16.264"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${brandname}&quot; == &quot;kia&quot;">
+<kw name="Go to Kia" library="NewCarPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${kiacar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:16.266" level="INFO">Clicking element '//div[normalize-space()='Kia']'.</msg>
+<status status="PASS" starttime="20220411 16:03:16.265" endtime="20220411 16:03:16.520"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:16.265" endtime="20220411 16:03:16.520"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:16.265" endtime="20220411 16:03:16.520"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Invalid car selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220411 16:03:16.521" endtime="20220411 16:03:16.521"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:16.520" endtime="20220411 16:03:16.521"/>
+</branch>
+<status status="PASS" starttime="20220411 16:03:16.262" endtime="20220411 16:03:16.521"/>
+</if>
+<kw name="verify car heading" library="CarBase">
+<arg>${carheading}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${carheading_xpath}</arg>
+<arg>${carheading}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:16.522" level="INFO">Verifying element '//*[@id='root']/div[2]/div/div[2]/div/h1' contains exact text 'Kia Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:16.522" endtime="20220411 16:03:16.630"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:16.521" endtime="20220411 16:03:16.630"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220411 16:03:18.638" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220411 16:03:16.631" endtime="20220411 16:03:18.638"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:07.463" endtime="20220411 16:03:18.638"/>
+</kw>
+<kw name="Finish Test Case" library="commons" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>Ending the test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220411 16:03:18.639" level="INFO">Ending the test case</msg>
+<status status="PASS" starttime="20220411 16:03:18.639" endtime="20220411 16:03:18.639"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220411 16:03:18.639" endtime="20220411 16:03:21.483"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:18.638" endtime="20220411 16:03:21.483"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:07.451" endtime="20220411 16:03:21.483"/>
+</test>
+<test id="s1-s1-t3" name="Find New Cars Test bmw" line="45">
+<kw name="Find New Cars">
+<arg>chrome</arg>
+<arg>bmw</arg>
+<arg>BMW Cars</arg>
+<kw name="launching browser" library="commons">
+<arg>${testsiteurl}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browserName}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220411 16:03:21.487" level="INFO">Opening browser 'chrome' to base url 'https://www.carwale.com/'.</msg>
+<status status="PASS" starttime="20220411 16:03:21.486" endtime="20220411 16:03:25.349"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220411 16:03:25.349" endtime="20220411 16:03:25.352"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20220411 16:03:25.365" level="INFO">New Cars, Used Cars, Buy a Car, Sell Your Car - CarWale</msg>
+<status status="PASS" starttime="20220411 16:03:25.353" endtime="20220411 16:03:25.365"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:21.485" endtime="20220411 16:03:25.366"/>
+</kw>
+<kw name="Go to new cars page" library="HomePage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${newcar_xpath}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220411 16:03:25.368" level="INFO">Simulating Mouse Over on element '//div[normalize-space()='NEW CARS']'.</msg>
+<status status="PASS" starttime="20220411 16:03:25.367" endtime="20220411 16:03:25.769"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${findnewcar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:25.771" level="INFO">Clicking element '//div[contains(text(),'Find New Cars')]'.</msg>
+<status status="PASS" starttime="20220411 16:03:25.770" endtime="20220411 16:03:26.252"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${newcar_header_xpath}</arg>
+<arg>New Cars</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:26.254" level="INFO">Verifying element '//h1[normalize-space()='New Cars']' contains exact text 'New Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:26.253" endtime="20220411 16:03:26.777"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:25.366" endtime="20220411 16:03:26.777"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${brandname}&quot; == &quot;toyota&quot;">
+<kw name="Go to Toyota" library="NewCarPage">
+<status status="NOT RUN" starttime="20220411 16:03:26.778" endtime="20220411 16:03:26.779"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:26.778" endtime="20220411 16:03:26.779"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${brandname}&quot; == &quot;bmw&quot;">
+<kw name="Go to BMW" library="NewCarPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${bmwcar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:26.780" level="INFO">Clicking element '//div[normalize-space()='BMW']'.</msg>
+<status status="PASS" starttime="20220411 16:03:26.780" endtime="20220411 16:03:26.855"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:26.779" endtime="20220411 16:03:26.855"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:26.779" endtime="20220411 16:03:26.856"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${brandname}&quot; == &quot;kia&quot;">
+<kw name="Go to Kia" library="NewCarPage">
+<status status="NOT RUN" starttime="20220411 16:03:26.856" endtime="20220411 16:03:26.856"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:26.856" endtime="20220411 16:03:26.857"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Invalid car selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220411 16:03:26.857" endtime="20220411 16:03:26.857"/>
+</kw>
+<status status="NOT RUN" starttime="20220411 16:03:26.857" endtime="20220411 16:03:26.857"/>
+</branch>
+<status status="PASS" starttime="20220411 16:03:26.778" endtime="20220411 16:03:26.857"/>
+</if>
+<kw name="verify car heading" library="CarBase">
+<arg>${carheading}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${carheading_xpath}</arg>
+<arg>${carheading}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:26.859" level="INFO">Verifying element '//*[@id='root']/div[2]/div/div[2]/div/h1' contains exact text 'BMW Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:26.858" endtime="20220411 16:03:27.716"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:26.858" endtime="20220411 16:03:27.717"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220411 16:03:29.720" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220411 16:03:27.717" endtime="20220411 16:03:29.720"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:21.485" endtime="20220411 16:03:29.721"/>
+</kw>
+<kw name="Finish Test Case" library="commons" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>Ending the test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220411 16:03:29.722" level="INFO">Ending the test case</msg>
+<status status="PASS" starttime="20220411 16:03:29.722" endtime="20220411 16:03:29.722"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220411 16:03:29.723" endtime="20220411 16:03:32.018"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:29.721" endtime="20220411 16:03:32.018"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:21.484" endtime="20220411 16:03:32.019"/>
+</test>
+<status status="PASS" starttime="20220411 16:02:55.070" endtime="20220411 16:03:32.019"/>
+</suite>
+<status status="PASS" starttime="20220411 16:02:55.050" endtime="20220411 16:03:32.020"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="FindNewCarsTestDataDriven">Testcases.FindNewCarsTestDataDriven</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

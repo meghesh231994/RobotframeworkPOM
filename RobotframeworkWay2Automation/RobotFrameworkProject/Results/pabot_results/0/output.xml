@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220411 16:02:55.112" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcases" source="C:\Users\way2automation\PycharmProjects\RobotFrameworkProject\testcases">
+<suite id="s1-s1" name="FindNewCarsTest" source="C:\Users\way2automation\PycharmProjects\RobotFrameworkProject\testcases\FindNewCarsTest.robot">
+<test id="s1-s1-t1" name="Find New Cars Test" line="21">
+<kw name="launching browser" library="commons">
+<arg>${testsiteurl}</arg>
+<arg>chrome</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browserName}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220411 16:02:55.416" level="INFO">Opening browser 'chrome' to base url 'https://www.carwale.com/'.</msg>
+<status status="PASS" starttime="20220411 16:02:55.415" endtime="20220411 16:03:00.843"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220411 16:03:00.843" endtime="20220411 16:03:00.845"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20220411 16:03:00.855" level="INFO">New Cars, Used Cars, Buy a Car, Sell Your Car - CarWale</msg>
+<status status="PASS" starttime="20220411 16:03:00.846" endtime="20220411 16:03:00.856"/>
+</kw>
+<status status="PASS" starttime="20220411 16:02:55.415" endtime="20220411 16:03:00.856"/>
+</kw>
+<kw name="Go to new cars page" library="HomePage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${newcar_xpath}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220411 16:03:00.859" level="INFO">Simulating Mouse Over on element '//div[normalize-space()='NEW CARS']'.</msg>
+<status status="PASS" starttime="20220411 16:03:00.857" endtime="20220411 16:03:01.160"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${findnewcar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:01.161" level="INFO">Clicking element '//div[contains(text(),'Find New Cars')]'.</msg>
+<status status="PASS" starttime="20220411 16:03:01.160" endtime="20220411 16:03:01.374"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${newcar_header_xpath}</arg>
+<arg>New Cars</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:01.375" level="INFO">Verifying element '//h1[normalize-space()='New Cars']' contains exact text 'New Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:01.374" endtime="20220411 16:03:01.675"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:00.857" endtime="20220411 16:03:01.676"/>
+</kw>
+<kw name="Go to BMW" library="NewCarPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${bmwcar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220411 16:03:01.678" level="INFO">Clicking element '//div[normalize-space()='BMW']'.</msg>
+<status status="PASS" starttime="20220411 16:03:01.677" endtime="20220411 16:03:01.770"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:01.676" endtime="20220411 16:03:01.771"/>
+</kw>
+<kw name="verify car heading" library="CarBase">
+<arg>BMW Cars</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${carheading_xpath}</arg>
+<arg>${carheading}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220411 16:03:01.773" level="INFO">Verifying element '//*[@id='root']/div[2]/div/div[2]/div/h1' contains exact text 'BMW Cars'.</msg>
+<status status="PASS" starttime="20220411 16:03:01.772" endtime="20220411 16:03:02.856"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:01.771" endtime="20220411 16:03:02.856"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220411 16:03:04.862" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220411 16:03:02.857" endtime="20220411 16:03:04.862"/>
+</kw>
+<kw name="Finish Test Case" library="commons" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>Ending the test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220411 16:03:04.864" level="INFO">Ending the test case</msg>
+<status status="PASS" starttime="20220411 16:03:04.863" endtime="20220411 16:03:04.864"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220411 16:03:04.864" endtime="20220411 16:03:07.179"/>
+</kw>
+<status status="PASS" starttime="20220411 16:03:04.863" endtime="20220411 16:03:07.180"/>
+</kw>
+<status status="PASS" starttime="20220411 16:02:55.414" endtime="20220411 16:03:07.180"/>
+</test>
+<status status="PASS" starttime="20220411 16:02:55.140" endtime="20220411 16:03:07.181"/>
+</suite>
+<status status="PASS" starttime="20220411 16:02:55.122" endtime="20220411 16:03:07.182"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="FindNewCarsTest">Testcases.FindNewCarsTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

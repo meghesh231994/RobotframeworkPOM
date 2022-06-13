@@ -1,0 +1,38 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Getcarnametest                                                      
+==============================================================================
+find new cars toyota                                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\Workspace\RobotPOMWay2\TestCases\getcarnametest.robot:18
+    T:  find new cars toyota    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\Workspace\RobotPOMWay2\TestCases\getcarnametest.robot:0
+      find new cars    Chrome    toyota    Toyota Cars
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\Workspace\RobotPOMWay2\TestCases\getcarnametest.robot:24
+      Go to new car page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\Workspace\RobotPOMWay2\PageObjects\HomePage.robot:13
+      Element Text Should Be    ${newcar_header_xpath}    New Cars
+      |  ${newcar_header_xpath} = //h1[normalize-space()='New Cars'] (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator '//h1[normalize-space()='New Cars']' not found.
+------------------------------------------------------------------------------
+find new cars kia                                                     Kia Carens
+Kia Sonet
+Kia Seltos
+Kia EV6
+Kia Carnival
+| PASS |
+------------------------------------------------------------------------------
+TestCases.Getcarnametest                                              | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Output:  E:\Workspace\RobotPOMWay2\Results\pabot_results\2\output.xml

@@ -1,0 +1,7 @@
+datasources:b11cba1e56e2fa6ca4dc9c6e7ffb5e0098c024a6
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:fadc6115ea5a50858ba71271bc531f78ee147a3a
+--suite TestCases.Findnewcartext
+--suite TestCases.Findnewcartextdatadriven
+--suite TestCases.Getcarnametest

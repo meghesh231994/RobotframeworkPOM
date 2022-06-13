@@ -1,0 +1,11 @@
+1649589566639	geckodriver	INFO	Listening on 127.0.0.1:60233
+1649589569722	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60234" "-no-remote" "-profile" "C:\\Users\\WAY2AU~1\\AppData\\Local\\Temp\\rust_mozprofileq9dfXV"
+1649589570069	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\way2automation\\AppData\\Local\\Temp\\rust_mozprofileq9dfXV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60234/devtools/browser/77091d3b-26ca-4b01-8555-012ccd94f2f8
+1649589572192	Marionette	INFO	Listening on port 60246
+1649589572395	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/yPRSpnmC7kCVHbP5HJYGhFaCAnVrOjYDhSjhq7GpE_U.js line 1 > eval line 824 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/yPRSpnmC7kCVHbP5HJYGhFaCAnVrOjYDhSjhq7GpE_U.js line 1 > eval line 7237 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1649589576700	Marionette	INFO	Stopped listening on port 60246
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.

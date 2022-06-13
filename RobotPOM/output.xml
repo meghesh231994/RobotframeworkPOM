@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.1 on win32)" generated="20220610 14:01:22.090" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="E:\Workspace\RobotPOMWay2\TestCases">
+<suite id="s1-s1" name="Findnewcartext" source="E:\Workspace\RobotPOMWay2\TestCases\findnewcartext.robot">
+<test id="s1-s1-t1" name="find new car test" line="16">
+<kw name="launching browser" library="Commons">
+<arg>${testsiteurl}</arg>
+<arg>Chrome</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browserName}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220610 14:01:22.360" level="INFO">Opening browser 'Chrome' to base url 'https://www.carwale.com/'.</msg>
+<errors>
+<msg timestamp="20220610 14:01:31.553" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>

@@ -1,0 +1,16 @@
+1649310803040	geckodriver	INFO	Listening on 127.0.0.1:52419
+1649310806098	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "52420" "-no-remote" "-profile" "C:\\Users\\WAY2AU~1\\AppData\\Local\\Temp\\rust_mozprofilehYEJfy"
+*** You are running in headless mode.
+1649310806432	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\way2automation\\AppData\\Local\\Temp\\rust_mozprofilehYEJfy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52420/devtools/browser/64d8c654-6172-4177-91c5-e20cfee0f46c
+1649310807736	Marionette	INFO	Listening on port 52427
+1649310808166	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://s7.addthis.com/static/r07/core201.js, line 3: TypeError: e.data.match is not a function
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VZx5lKL-R1DYt4uczQuO7ewneocOxZLDwOE_DB7Gp_E.js line 1 > eval line 4322 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1649310813706	Marionette	INFO	Stopped listening on port 52427
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
