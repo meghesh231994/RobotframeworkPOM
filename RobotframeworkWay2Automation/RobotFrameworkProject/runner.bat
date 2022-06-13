@@ -1,1 +1,0 @@
-pabot --processes 3 -d Results .\testcases
