@@ -1,0 +1,219 @@
+Q.Introduced yourself.
+Q.What are the data types in python.
+Q.How to create custome data types in Python.
+Q.What is conditional statement in python.
+----->Conditional statement is also called as decision making statement we use those statement
+when we want to execute block of code when the condition is true or false.
+
+Q.When we use for loop.
+----->for loop is used to iterate over iterable object.
+Q.When we use while loop.
+----->while loop is simply loop over the object untill condition is false.
+Q.Print  the numbers from 1 to 10 by using for loop.
+Q.Print the numbers from 1 to 20 by using while loop.
+Q.Print the numbers in reverse order from 10 to 1 by using for loop.
+Q.Print the numbers in reverse order from 10 to 1 by using while loop.
+Q.What are the properties of List.
+Q.What is mean by mutable./Explain mutability.
+----->mutability means we can add remove element from the list.
+Q.What are the properties of Tuple.
+----->tuples are ordered
+immutable
+hetergenus
+allow duplicate value
+allow slicing and indexing
+Q.What are the methods of tuple.
+index
+count
+Q.Explain the index,count method of tuple.
+index()_>it will get the particular index of an element
+cout()-->will check the no of occuernec of element
+Q.What are the methods of list.
+Q.How many arguments in extend method
+----->extend takes single argument.
+Q.What are the types of arguments does extend method take.
+Q.Explain properties of dict.
+Q.What are the properties of set.
+1)mutable
+2)hetergeiso
+3)does not allow duplicate value
+4)does not allow indexing and slicing
+5)unordered 
+
+Q.Explain the methods of dictionary.
+Q.What are the popitem method returns.
+Q.Explain the methods of set.
+---->add()
+clear()
+pop()
+remove()
+discard()
+update()
+Q.What are difference between remove and discard method.
+------>the remove() method will raise an error if the specified item does not exist, and the discard() method will not.
+Q.Can we store a tuple in set.
+-------> yes
+Q.Can we store list,dict in set.
+------>no
+Q.What is frozenset.
+----->it is immutable version of set
+Q.What will be the output? s = {1, 2, 3, 'a', 2,'b', True, 1, 10, 'z', 's', False, 0, 2, 30, 40} 
+Q.What are iterators.
+------->An iterator is an object that can traverse through all the values.
+Q.What are generators.
+
+Q.What are decorators.
+Q.What is lambda expression.
+----->A lambda function is a small anonymous function.
+      A lambda function can take any number of arguments, but can only have one expression.
+
+Q.File handling task.You have to write first line-python,second line-mock interview.How to write in python file?
+------>f= open("E:/Workspace/fh.txt",'w')
+# data = f.read()
+# print(data)
+
+data1= f.write('hello world\n')
+data2= f.write('cc')
+print(data1)
+print(data2)
+f.close()
+
+
+Q.What is ineritance?
+------>Inheritance is a property in which we can inherit the property of another class into child class.
+
+Q.Explain types of inheritance?
+
+Q.What is multiple inheritance?
+---->A class which derived from one or more then one base class.
+Q.What is heirachical inhertance?
+---->When more than one derived classes are created from a single base class.
+Q.What is multilevel inheritance?
+----->features of the base class and the derived class are further inherited into the new derived class.
+
+Q.What is class?
+----->class is a extensible programming code tempalate that is allows us to define
+variables and methods inside the class and to create object of class.
+ 
+Q.I want to print the value of x which is defined in parent class by using single level inheritance.
+Q.What is abstraction?
+----->Abstraction is showing necessary and hidding unnecssary things
+Q.What is encapsulation?
+---->wrapping up methods and variable in single entity is called as encapsulation
+Q.What is abstract method?
+---->An abstract method is a method that has a declaration but does not have an implementation
+Q.What is abstarct class?which module we have to import for abstarction.
+abstract class is derivd from class 'ABC' in which atleast one abstract method is present.
+Q.Can we create the object of abstract class?
+---->no
+Q.What is exception handling?
+----->it ensure that programme doesnt break when exception occur.
+Q.Explain try,except,finally block
+try--->try block will test if error is going to occur or not
+except--->The except block lets you handle the error.
+
+Q.Can we handle the syntax error by using exception?
+Q.What is multithreading?
+---->Multithreading enables us to run multiple threads concurrently
+Q.What is thread?
+---->A thread is a separate flow of execution.
+Q.How to achieve multithreading?
+----->Multithreading in Python can be achieved by importing the threading module
+Q.Which module i have to import for getting current thread name?
+
+
+Q.sort() will sort the list in-place, mutating its indexes and returning None.  
+  sorted() will return a new sorted list leaving the original list unchanged.
+
+
+
+
+
+
+SQL
+Q.I want to add new column in my existing table.which query you are fired?
+Q.What is the distinct clause?
+Q.What is primary key?
+Q.What is foreign key
+Q.What is not null constraint,unique constraint?
+Q.What are joins?
+Q.Why to be used joins?
+Q.What is left join,right join?
+Q.What is inner join?
+Q.What is the full form of PDBC?
+Q.What are the steps to connect the database to python?
+Q.What dose the connect method return?
+Q.Which method returns the obj/instance of cursor class.
+Q.Which method execute the raw sql query?
+Q.What is sqlalchemy orm ?
+Q.Define the term ORM?
+Q.What are the two ways to design the sqla?ans-declarative and classical way.
+Q.What is the difference between them?
+Q.Write the sqlalchemy orm query to retrive all  the data from student table?
+Q.Write the sqlalchemyorm query to retrive the records from student table having roll no grater than 5.
+Q.Full form of HTML
+Q.What is the Use of anchar tag?
+Q.What is the form tag?
+Q.What is div tag?
+Q.What is the use of div tag?
+Q.What is the use of markque tag?
+Q.What is full form of CSS?
+Q.What are selectors in CSS?
+Q.How many selectors are present in css
+Q.What is id and class in selectors?What is the purpose of id and selectors?
+Q.How to create id selector and how to create an class selector?
+Q.How many ways to apply the styling to html page?
+Q.How many types of variable in js
+Q.Explain scopesin js
+Q.What is DOM?
+Q.How to create an arrow function and what are the rules to create arrow fun for that?
+Q.How many ways to call a function in js?
+Q.What is the use of filter function in js?
+Q.What is map function?
+Q.What is JSX?
+Q.What is use of render function?
+Q.How many parameters in render fun in reactjs?
+Q.What is Props?
+Q.Explain the hooks and their rules?
+Q.What is default export and named export?
+Q.What is component and there types?
+Q.Explain the request-response cycle in django?
+Q.Request which comes from the browser in which modu ans-http module
+Q.What is the default port no of django application?
+Q.What is the default port no for mysql application?-3306
+Q.Expain django apps?
+Q.Explain the middleware in django?
+Q.What is context?
+Q.What does the render function returns?
+Q.What is session?
+Q.How many types of views is there?
+Q.Explain the generic views?
+Q.What is an API?
+Q.What is the purpose of using API?
+Q.Differe between SOAP and REST
+Q.Which one is faster?
+Q.What is serialization?
+Q.What is de-serialization?
+Q.What is load method does?
+Q.From which module we import load method?
+Q.What is dump method?
+Q.What is JSON?
+Q.What are http status code why we use them?
+Q.What is purpose of 200 status code,400 status code?
+Q.What is postman?
+Total no ques=121
+def m1(m):
+   if m<1 or m>12:
+      raise ValueError("Invalid")
+   print(m)
+m1(6)   #ans-6
+
+
+
+
+
+
+
+
+
+
